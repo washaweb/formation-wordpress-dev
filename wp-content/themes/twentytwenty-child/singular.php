@@ -12,11 +12,6 @@
 get_header();
 ?>
 
-
-<h1>Contenu à modifier</h1>
-
-<p><?php twentytwenty_child_test() ?></p>
-
 <main id="site-content" role="main">
 
 	<?php
@@ -36,4 +31,4 @@ get_header();
 
 <?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
 
-<?php get_footer('contact'); ?>
+<?php get_footer(); ?>
