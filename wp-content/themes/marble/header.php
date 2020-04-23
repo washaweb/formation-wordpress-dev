@@ -3,7 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Marble - homepage</title>
+
 	<!-- polices -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:400,700|Roboto+Slab:400,700" rel="stylesheet">
 	
@@ -22,14 +22,15 @@
 		<div class="wrapper">
 			<h1 class="logo">Marble</h1>
 			<nav>
-				<ul>
+				<!-- <ul>
 					<li class="active"><a href="#">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Journal</a></li>
 					<li><a href="#">Service</a></li>
 					<li><a href="#">Features</a></li>
 					<li><a href="#">Contact</a></li>
-				</ul>
+				</ul> -->
+				<?php wp_nav_menu( array( 'theme_location' => 'primary_menu' ) ); ?>
 			</nav>
 			<!-- ./main navigation -->
 		</div>
