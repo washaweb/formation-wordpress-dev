@@ -76,9 +76,9 @@ function marble_sidebar_registration() {
 		'description' => 'Zone de widgets de la sidebar', //description
 		//des informations pour le rendu html des widgets dans cette sidebar
 
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-		'before_widget' => '<div class="col widget %2$s">',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+		'before_widget' => '<div class="aside-widget widget %2$s">',
 		'after_widget'  => '</div>',
 	) );
 }
