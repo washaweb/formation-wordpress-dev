@@ -254,10 +254,12 @@ body {
 
 /*----------  section-latest-work  ----------*/
 
+#section-latest-news,
 #section-latest-work {
 	padding: 0px 0px 40px;
 }
 
+#section-latest-news h3,
 #section-latest-work h3 {
 	font: 700 22px/26px 'Roboto Condensed', sans-serif;
 	color: #4e4e4e;
@@ -265,12 +267,14 @@ body {
 	letter-spacing: -0.06em;
 }
 
+#section-latest-news h4,
 #section-latest-work h4 {
 	font: 700 18px/22px 'Roboto Slab', sans-serif;
 	color: #4e4e4e;
 	margin: 18px 0px 5px;
 }
 
+#section-latest-news h5,
 #section-latest-work h5 {
 	font: 13px/16px 'Roboto Slab', sans-serif;
 	color:  #a8a8a8;

@@ -41,6 +41,19 @@ function marble_theme_support() {
         'footer_menu'  => 'Menu du pied de page',
 	) );
 
+
+	/**
+	 * Support des images à la une (featured images)
+	 */
+	add_theme_support( 'post-thumbnails' );
+
+	/** 
+	 * ajout des formats d'images utilisées dans notre thème 
+	 */
+	//add_image_size( 'identifiant-format-image', $width, $height, $crop );
+	add_image_size( 'front-page-thumb', 380, 270, true );
+	// À chaque fois qu'on modifie les formats d'images, il faut regénérer les mignatures avec le plugin "regenerate-thumbnails"
+
 }
 
 //pour que la fonction soit appelée, on doit dire à Wordpress à quel moment on souhaite qu'il l'appelle

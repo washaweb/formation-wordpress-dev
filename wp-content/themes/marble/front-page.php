@@ -69,6 +69,65 @@
 				</article>
 			</div>
 		</section>
+
+		<section id="section-latest-news" class="wrapper">
+			<h3>Our latest news</h3>
+			<div class="container">
+				
+			<?php 
+				/**
+				 * Faire une requête personalisée dans WP avec WP_Query() 
+				 *	https://developer.wordpress.org/reference/classes/wp_query/
+				 */
+				//Créer une propriété $args qui sont les arguments de la requête
+				$args = array(
+					'post_type' => 'post',
+					'posts_per_page' => 3
+				);
+
+				// Crée la requête à la base de donnée en passant les arguments dans la classe WP_Query
+				//On récupère les résultats dans $the_query
+				$the_query = new WP_Query( $args );
+				
+				
+				// On boucle sur les résultats de $the_query
+				//si j'ai des résultats...
+				if ( $the_query->have_posts() ) :
+					
+					while ( $the_query->have_posts() ) :
+						$the_query->the_post();
+
+						//ici on peut utiliser les templates tags pour afficher les données de chaque post de la query.
+						
+						?>
+						<article class="col">
+							<!-- 
+								On utilise un format d'image personalisé: 'front-page-thumb', voir dans functions.php 
+								on a utilisé add_image_size() pour le créer.
+							-->
+							<?php the_post_thumbnail( 'front-page-thumb' ); ?>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<h5><?php the_category(', '); ?></h5>
+							<?php the_excerpt(); ?>
+						</article>
+						<?php
+					endwhile;
+					
+				//sinon...
+				else :
+					// no posts found
+				endif;
+
+				/* rétablir les données/paramètres de la boucle principale 
+					à mettre OBLIGATOIREMENT une fois qu'on a fini de traiter 
+					notre boucle personnalisée */
+				wp_reset_postdata();
+			?>
+
+				
+
+			</div>
+		</section>
 <?php 
 	//inclus le fichier footer.php
 	get_footer(); 
