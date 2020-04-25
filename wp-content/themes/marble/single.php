@@ -24,6 +24,14 @@
                                     the_post();
                                     ?>
                                     <div class="post-hentry">
+
+
+                                        <?php 
+                                            //affiche l'image du post
+                                            the_post_thumbnail( 'single-page-thumb' );
+                                        ?>
+
+
                                         <?php
                                             //permet d'utiliser les templates tags
                                             //voir les template tags:
